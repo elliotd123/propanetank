@@ -1,0 +1,6 @@
+# Format for each line must be: YYYY-mm-dd:level
+# Create lines in correct date order, or the plot might be weirdly
+
+2022-10-08:78
+2022-10-10:76
+2022-10-11:73
