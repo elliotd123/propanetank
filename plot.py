@@ -8,6 +8,7 @@ if __name__ == "__main__":
     x = []
     y = []
     currentday = None
+    firstday = None
     daygap = 0
     for line in data.split('\n')[::-1]:
         if line.strip().startswith("#") or len(line.strip()) == 0:
@@ -19,6 +20,8 @@ if __name__ == "__main__":
         if currentday != None:
             daygap = daygap + (date - currentday).days
         currentday = date
+        if firstday is None:
+            firstday = date
         x.append(daygap)
         y.append(level)
     
@@ -28,7 +31,8 @@ if __name__ == "__main__":
     daystoplot = range(daygap,30)
     pyplot.plot(x,y, 'yo', daystoplot, poly1d_fn(daystoplot), '--k')
     pyplot.title("Propane Projection")
-    pyplot.annotate(currentday.strftime("%F"),(x[len(x)-1],y[len(y)-1]))
+    annotation = firstday.strftime("%F") + " - " + str(y[0]) + "%"
+    pyplot.annotate(annotation,(x[0],y[0]),arrowprops={})
     pyplot.xlabel("Days from the last entry")
     pyplot.ylabel("Propane Level (%)")
 
