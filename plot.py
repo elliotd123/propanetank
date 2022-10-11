@@ -28,5 +28,8 @@ if __name__ == "__main__":
     daystoplot = range(daygap,30)
     pyplot.plot(x,y, 'yo', daystoplot, poly1d_fn(daystoplot), '--k')
     pyplot.title("Propane Projection")
+    pyplot.annotate(currentday.strftime("%F"),(x[len(x)-1],y[len(y)-1]))
+    pyplot.xlabel("Days from the last entry")
+    pyplot.ylabel("Propane Level (%)")
 
     pyplot.show()
