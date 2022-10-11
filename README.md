@@ -8,7 +8,7 @@
 ## Installing dependencies
 * You can do this in a virtual environment
 ```bash
-pip install .
+pip install git+https://github.com/elliotd123/propanetank.git
 ```
 
 ## Running
