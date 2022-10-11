@@ -3,7 +3,7 @@ import numpy
 from matplotlib import pyplot
 from datetime import datetime
 
-if __name__ == "__main__":
+def local_main():
     data = open("data.txt").read()
     x = []
     y = []
@@ -37,3 +37,6 @@ if __name__ == "__main__":
     pyplot.ylabel("Propane Level (%)")
 
     pyplot.show()
+
+if __name__ == "__main__":
+    local_main()

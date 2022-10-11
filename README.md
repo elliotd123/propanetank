@@ -8,5 +8,12 @@
 ## Installing dependencies
 * You can do this in a virtual environment
 ```bash
-pip install -r requirements.txt
+pip install .
+```
+
+## Running
+* Currently you need a properly formatted "data.txt" in your current working directory
+
+```bash
+propane-plot
 ```
